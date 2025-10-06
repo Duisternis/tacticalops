@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TACTICAL OPS | Competitive FPS</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="nav-content">
+      <div class="logo">TACTICAL <span>OPS</span></div>
+      <ul class="nav-links">
+        <li><a href="#game">Training</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#competitive">Competitive</a></li>
+        <li><a href="#store">Store</a></li>
+      </ul>
+      <button class="nav-cta"><span>Download Now</span></button>
+    </div>
+  </nav>
+
+  <div class="game-wrapper">
+    <div class="game-bg"></div>
+    <div class="grid-overlay"></div>
+    <div class="scanlines"></div>
+
+    <div class="start-overlay" id="startOverlay">
+      <!-- Animated background elements -->
+      <div class="preview-target" style="left: 15%; top: 20%; animation-delay: 0s;">
+        <div class="preview-target-inner"></div>
+      </div>
+      <div class="preview-target" style="left: 75%; top: 30%; animation-delay: 1s;">
+        <div class="preview-target-inner"></div>
+      </div>
+      <div class="preview-target" style="left: 60%; top: 70%; animation-delay: 2s;">
+        <div class="preview-target-inner"></div>
+      </div>
+      <div class="preview-target" style="left: 25%; top: 65%; animation-delay: 1.5s;">
+        <div class="preview-target-inner"></div>
+      </div>
+      <div class="preview-target" style="left: 85%; top: 55%; animation-delay: 0.5s;">
+        <div class="preview-target-inner"></div>
+      </div>
+
+      <div class="preview-crosshair" style="animation-delay: 0s;"></div>
+      <div class="preview-crosshair" style="animation-delay: 2s; animation-duration: 8s;"></div>
+
+      <div class="preview-hit" style="left: 20%; top: 25%; animation-delay: 1.2s;">+100</div>
+      <div class="preview-hit" style="left: 70%; top: 35%; animation-delay: 2.5s;">+150</div>
+      <div class="preview-hit" style="left: 55%; top: 68%; animation-delay: 0.8s;">+200</div>
+
+      <div class="preview-flash" style="left: 30%; top: 40%; animation-delay: 1s;"></div>
+      <div class="preview-flash" style="left: 65%; top: 60%; animation-delay: 2.5s;"></div>
+
+      <div class="start-content">
+        <h1 class="start-title">TRAINING MODE</h1>
+        <p class="start-subtitle">Elite Operator Training</p>
+        <p class="start-description">Eliminate targets as they appear. Build your combo streak for maximum points. Wave
+          difficulty increases progressively.</p>
+        <button class="start-button" onclick="startGame()">
+          <span>START GAME</span>
+        </button>
+        <p class="start-instructions">Click targets to eliminate • Build combos • Survive the waves</p>
+      </div>
+    </div>
+
+    <div class="hud-overlay">
+      <div class="hud-container">
+        <div class="hud-header">
+          <div class="hud-title">Mission Stats</div>
+          <div class="hud-subtitle">Live Data</div>
+        </div>
+        <div class="hud-stats">
+          <div class="hud-stat">
+            <span class="hud-stat-label">Kills</span>
+            <span class="hud-stat-value" id="kills">0</span>
+          </div>
+          <div class="hud-divider"></div>
+          <div class="hud-stat">
+            <span class="hud-stat-label">Combo</span>
+            <span class="hud-stat-value" id="combo">0x</span>
+          </div>
+          <div class="hud-divider"></div>
+          <div class="hud-stat">
+            <span class="hud-stat-label">Wave</span>
+            <span class="hud-stat-value" id="wave">1</span>
+          </div>
+          <div class="hud-divider"></div>
+          <div class="hud-stat">
+            <span class="hud-stat-label">Accuracy</span>
+            <span class="hud-stat-value" id="accuracy">100%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="crosshair">
+      <div class="crosshair-center"></div>
+    </div>
+
+    <div class="game-canvas" id="gameCanvas"></div>
+  </div>
+
+  <script src="/game.js"></script>
+  <script src="/crt.js"></script>
+</body>
+
+</html>
